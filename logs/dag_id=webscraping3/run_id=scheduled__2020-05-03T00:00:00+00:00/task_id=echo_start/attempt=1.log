@@ -1,0 +1,17 @@
+[2024-11-18T08:23:46.760+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: webscraping3.echo_start scheduled__2020-05-03T00:00:00+00:00 [queued]>
+[2024-11-18T08:23:46.771+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: webscraping3.echo_start scheduled__2020-05-03T00:00:00+00:00 [queued]>
+[2024-11-18T08:23:46.771+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-11-18T08:23:46.793+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): echo_start> on 2020-05-03 00:00:00+00:00
+[2024-11-18T08:23:46.802+0000] {standard_task_runner.py:60} INFO - Started process 18675 to run task
+[2024-11-18T08:23:46.807+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'webscraping3', 'echo_start', 'scheduled__2020-05-03T00:00:00+00:00', '--job-id', '4865', '--raw', '--subdir', 'DAGS_FOLDER/***_webscraping.py', '--cfg-path', '/tmp/tmpfagmrl99']
+[2024-11-18T08:23:46.811+0000] {standard_task_runner.py:88} INFO - Job 4865: Subtask echo_start
+[2024-11-18T08:23:46.883+0000] {task_command.py:423} INFO - Running <TaskInstance: webscraping3.echo_start scheduled__2020-05-03T00:00:00+00:00 [running]> on host 3c704ad499e6
+[2024-11-18T08:23:46.994+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='webscraping3' AIRFLOW_CTX_TASK_ID='echo_start' AIRFLOW_CTX_EXECUTION_DATE='2020-05-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2020-05-03T00:00:00+00:00'
+[2024-11-18T08:23:46.996+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-11-18T08:23:46.997+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo Start scraping.']
+[2024-11-18T08:23:47.012+0000] {subprocess.py:86} INFO - Output:
+[2024-11-18T08:23:47.016+0000] {subprocess.py:93} INFO - Start scraping.
+[2024-11-18T08:23:47.017+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-11-18T08:23:47.048+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=webscraping3, task_id=echo_start, execution_date=20200503T000000, start_date=20241118T082346, end_date=20241118T082347
+[2024-11-18T08:23:47.108+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-11-18T08:23:47.148+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

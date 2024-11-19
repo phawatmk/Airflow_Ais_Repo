@@ -1,0 +1,28 @@
+[2024-11-18T03:49:09.620+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_test_dir.make_directory manual__2024-11-18T03:48:08.471177+00:00 [queued]>
+[2024-11-18T03:49:09.628+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_test_dir.make_directory manual__2024-11-18T03:48:08.471177+00:00 [queued]>
+[2024-11-18T03:49:09.628+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 2
+[2024-11-18T03:49:09.642+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): make_directory> on 2024-11-18 03:48:08.471177+00:00
+[2024-11-18T03:49:09.647+0000] {standard_task_runner.py:60} INFO - Started process 11662 to run task
+[2024-11-18T03:49:09.650+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'create_test_dir', 'make_directory', 'manual__2024-11-18T03:48:08.471177+00:00', '--job-id', '3552', '--raw', '--subdir', 'DAGS_FOLDER/directory.py', '--cfg-path', '/tmp/tmpqo5iajkq']
+[2024-11-18T03:49:09.652+0000] {standard_task_runner.py:88} INFO - Job 3552: Subtask make_directory
+[2024-11-18T03:49:09.701+0000] {task_command.py:423} INFO - Running <TaskInstance: create_test_dir.make_directory manual__2024-11-18T03:48:08.471177+00:00 [running]> on host 3c704ad499e6
+[2024-11-18T03:49:09.777+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_test_dir' AIRFLOW_CTX_TASK_ID='make_directory' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T03:48:08.471177+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T03:48:08.471177+00:00'
+[2024-11-18T03:49:09.778+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-11-18T03:49:09.779+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'mkdir -f /opt/***/dags/output/test_dir']
+[2024-11-18T03:49:09.790+0000] {subprocess.py:86} INFO - Output:
+[2024-11-18T03:49:09.795+0000] {subprocess.py:93} INFO - mkdir: invalid option -- 'f'
+[2024-11-18T03:49:09.795+0000] {subprocess.py:93} INFO - Try 'mkdir --help' for more information.
+[2024-11-18T03:49:09.796+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-11-18T03:49:09.806+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-11-18T03:49:09.809+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=create_test_dir, task_id=make_directory, execution_date=20241118T034808, start_date=20241118T034909, end_date=20241118T034909
+[2024-11-18T03:49:09.821+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3552 for task make_directory (Bash command failed. The command returned a non-zero exit code 1.; 11662)
+[2024-11-18T03:49:09.862+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-11-18T03:49:09.887+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

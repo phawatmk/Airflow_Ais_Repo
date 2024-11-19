@@ -1,0 +1,13 @@
+[2024-11-18T08:29:29.404+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: webscraping3.scraping scheduled__2021-06-17T00:00:00+00:00 [queued]>
+[2024-11-18T08:29:29.416+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: webscraping3.scraping scheduled__2021-06-17T00:00:00+00:00 [queued]>
+[2024-11-18T08:29:29.417+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-11-18T08:29:29.438+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): scraping> on 2021-06-17 00:00:00+00:00
+[2024-11-18T08:29:29.445+0000] {standard_task_runner.py:60} INFO - Started process 22450 to run task
+[2024-11-18T08:29:29.455+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'webscraping3', 'scraping', 'scheduled__2021-06-17T00:00:00+00:00', '--job-id', '6506', '--raw', '--subdir', 'DAGS_FOLDER/***_webscraping.py', '--cfg-path', '/tmp/tmpz56qia47']
+[2024-11-18T08:29:29.459+0000] {standard_task_runner.py:88} INFO - Job 6506: Subtask scraping
+[2024-11-18T08:29:29.530+0000] {task_command.py:423} INFO - Running <TaskInstance: webscraping3.scraping scheduled__2021-06-17T00:00:00+00:00 [running]> on host 3c704ad499e6
+[2024-11-18T08:29:29.648+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='webscraping3' AIRFLOW_CTX_TASK_ID='scraping' AIRFLOW_CTX_EXECUTION_DATE='2021-06-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2021-06-17T00:00:00+00:00'
+[2024-11-18T08:29:29.817+0000] {python.py:202} INFO - Done. Returned value was: ['Introduction to Python Programming', 'Python Web Development with Flask', 'Full Stack Vue.js with Flask (REST Api)', 'Python Line Chatbot', 'Python Pandas', 'Python Web Development with Django', 'Python Programming & Web Development 2021 Full Courses', 'Basic Machine Learning with Python', 'Django REST Framework', 'Django Wagtail CMS']
+[2024-11-18T08:29:29.852+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=webscraping3, task_id=scraping, execution_date=20210617T000000, start_date=20241118T082929, end_date=20241118T082929
+[2024-11-18T08:29:29.907+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-11-18T08:29:30.032+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

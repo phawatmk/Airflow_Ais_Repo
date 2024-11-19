@@ -1,0 +1,37 @@
+[2024-11-18T06:43:05.213+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crud_postgres.create_schema scheduled__2024-11-17T00:00:00+00:00 [queued]>
+[2024-11-18T06:43:05.220+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crud_postgres.create_schema scheduled__2024-11-17T00:00:00+00:00 [queued]>
+[2024-11-18T06:43:05.221+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-11-18T06:43:05.233+0000] {taskinstance.py:2217} INFO - Executing <Task(PostgresOperator): create_schema> on 2024-11-17 00:00:00+00:00
+[2024-11-18T06:43:05.238+0000] {standard_task_runner.py:60} INFO - Started process 14490 to run task
+[2024-11-18T06:43:05.242+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'crud_postgres', 'create_schema', 'scheduled__2024-11-17T00:00:00+00:00', '--job-id', '3669', '--raw', '--subdir', 'DAGS_FOLDER/CRUD_Postgres.py', '--cfg-path', '/tmp/tmp9gkyk7wk']
+[2024-11-18T06:43:05.243+0000] {standard_task_runner.py:88} INFO - Job 3669: Subtask create_schema
+[2024-11-18T06:43:05.293+0000] {task_command.py:423} INFO - Running <TaskInstance: crud_postgres.create_schema scheduled__2024-11-17T00:00:00+00:00 [running]> on host 3c704ad499e6
+[2024-11-18T06:43:05.383+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crud_postgres' AIRFLOW_CTX_TASK_ID='create_schema' AIRFLOW_CTX_EXECUTION_DATE='2024-11-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-17T00:00:00+00:00'
+[2024-11-18T06:43:05.384+0000] {sql.py:276} INFO - Executing: CREATE SCHEMA IF NOT EXISTS phawatmk;
+[2024-11-18T06:43:05.393+0000] {base.py:83} INFO - Using connection ID 'azure_postgres_conn' for task execution.
+[2024-11-18T06:43:05.409+0000] {base.py:83} INFO - Using connection ID 'azure_postgres_conn' for task execution.
+[2024-11-18T06:43:05.466+0000] {sql.py:457} INFO - Running statement: CREATE SCHEMA IF NOT EXISTS phawatmk;, parameters: None
+[2024-11-18T06:43:05.474+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 404, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 462, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "pg_namespace_nspname_index"
+DETAIL:  Key (nspname)=(phawatmk) already exists.
+
+[2024-11-18T06:43:05.482+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=crud_postgres, task_id=create_schema, execution_date=20241117T000000, start_date=20241118T064305, end_date=20241118T064305
+[2024-11-18T06:43:05.498+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3669 for task create_schema (duplicate key value violates unique constraint "pg_namespace_nspname_index"
+DETAIL:  Key (nspname)=(phawatmk) already exists.
+; 14490)
+[2024-11-18T06:43:05.534+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-11-18T06:43:05.547+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+  result = cls.__new__(cls)
+
+[2024-11-18T06:43:05.562+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

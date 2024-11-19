@@ -1,0 +1,15 @@
+[2024-11-18T08:33:25.500+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: covid19_get_data.get_covid19_report_today scheduled__2020-10-05T00:00:00+00:00 [queued]>
+[2024-11-18T08:33:25.526+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: covid19_get_data.get_covid19_report_today scheduled__2020-10-05T00:00:00+00:00 [queued]>
+[2024-11-18T08:33:25.526+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-11-18T08:33:25.570+0000] {taskinstance.py:2217} INFO - Executing <Task(SimpleHttpOperator): get_covid19_report_today> on 2020-10-05 00:00:00+00:00
+[2024-11-18T08:33:25.579+0000] {standard_task_runner.py:60} INFO - Started process 25052 to run task
+[2024-11-18T08:33:25.596+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'covid19_get_data', 'get_covid19_report_today', 'scheduled__2020-10-05T00:00:00+00:00', '--job-id', '7645', '--raw', '--subdir', 'DAGS_FOLDER/covid19_get_data.py', '--cfg-path', '/tmp/tmpu0yopp49']
+[2024-11-18T08:33:25.602+0000] {standard_task_runner.py:88} INFO - Job 7645: Subtask get_covid19_report_today
+[2024-11-18T08:33:25.784+0000] {task_command.py:423} INFO - Running <TaskInstance: covid19_get_data.get_covid19_report_today scheduled__2020-10-05T00:00:00+00:00 [running]> on host 3c704ad499e6
+[2024-11-18T08:33:26.022+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='covid19_get_data' AIRFLOW_CTX_TASK_ID='get_covid19_report_today' AIRFLOW_CTX_EXECUTION_DATE='2020-10-05T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2020-10-05T00:00:00+00:00'
+[2024-11-18T08:33:26.026+0000] {http.py:169} INFO - Calling HTTP method
+[2024-11-18T08:33:26.050+0000] {base.py:83} INFO - Using connection ID 'https_covid19_api' for task execution.
+[2024-11-18T08:33:26.069+0000] {base.py:83} INFO - Using connection ID 'https_covid19_api' for task execution.
+[2024-11-18T08:33:26.491+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=covid19_get_data, task_id=get_covid19_report_today, execution_date=20201005T000000, start_date=20241118T083325, end_date=20241118T083326
+[2024-11-18T08:33:26.583+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-11-18T08:33:26.621+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

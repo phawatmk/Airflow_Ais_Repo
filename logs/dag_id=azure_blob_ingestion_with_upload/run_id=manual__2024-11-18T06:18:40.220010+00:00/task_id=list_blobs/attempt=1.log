@@ -1,0 +1,106 @@
+[2024-11-18T06:18:41.663+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: azure_blob_ingestion_with_upload.list_blobs manual__2024-11-18T06:18:40.220010+00:00 [queued]>
+[2024-11-18T06:18:41.673+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: azure_blob_ingestion_with_upload.list_blobs manual__2024-11-18T06:18:40.220010+00:00 [queued]>
+[2024-11-18T06:18:41.673+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-11-18T06:18:41.689+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): list_blobs> on 2024-11-18 06:18:40.220010+00:00
+[2024-11-18T06:18:41.695+0000] {standard_task_runner.py:60} INFO - Started process 14119 to run task
+[2024-11-18T06:18:41.699+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'azure_blob_ingestion_with_upload', 'list_blobs', 'manual__2024-11-18T06:18:40.220010+00:00', '--job-id', '3663', '--raw', '--subdir', 'DAGS_FOLDER/Access_AzureBlobStorage.py', '--cfg-path', '/tmp/tmpagxwodud']
+[2024-11-18T06:18:41.701+0000] {standard_task_runner.py:88} INFO - Job 3663: Subtask list_blobs
+[2024-11-18T06:18:41.757+0000] {task_command.py:423} INFO - Running <TaskInstance: azure_blob_ingestion_with_upload.list_blobs manual__2024-11-18T06:18:40.220010+00:00 [running]> on host 3c704ad499e6
+[2024-11-18T06:18:41.836+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='azure_blob_ingestion_with_upload' AIRFLOW_CTX_TASK_ID='list_blobs' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T06:18:40.220010+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T06:18:40.220010+00:00'
+[2024-11-18T06:18:41.840+0000] {logging_mixin.py:188} INFO - Blobs in the container:
+[2024-11-18T06:18:41.842+0000] {_universal.py:514} INFO - Request URL: 'https://***lab2024.blob.core.windows.net/ais-container?restype=REDACTED&comp=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.1 Python/3.8.18 (Linux-6.5.0-1025-azure-x86_64-with-glibc2.34)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'f515dbae-a574-11ef-937e-0242ac120004'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-11-18T06:18:41.914+0000] {_universal.py:550} INFO - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '9e93cc60-801e-000f-5381-39a76f000000'
+    'x-ms-client-request-id': 'f515dbae-a574-11ef-937e-0242ac120004'
+    'x-ms-version': 'REDACTED'
+    'Date': 'Mon, 18 Nov 2024 06:18:41 GMT'
+[2024-11-18T06:18:41.944+0000] {logging_mixin.py:188} INFO - anekkong
+[2024-11-18T06:18:41.944+0000] {logging_mixin.py:188} INFO - anekkong/test.txt
+[2024-11-18T06:18:41.944+0000] {logging_mixin.py:188} INFO - anuchaki
+[2024-11-18T06:18:41.944+0000] {logging_mixin.py:188} INFO - anuchaki/test.txt
+[2024-11-18T06:18:41.944+0000] {logging_mixin.py:188} INFO - anurakho
+[2024-11-18T06:18:41.945+0000] {logging_mixin.py:188} INFO - anurakho/test.txt
+[2024-11-18T06:18:41.945+0000] {logging_mixin.py:188} INFO - arinsang
+[2024-11-18T06:18:41.945+0000] {logging_mixin.py:188} INFO - arinsang/test.txt
+[2024-11-18T06:18:41.945+0000] {logging_mixin.py:188} INFO - detchant
+[2024-11-18T06:18:41.945+0000] {logging_mixin.py:188} INFO - detchant/test.txt
+[2024-11-18T06:18:41.945+0000] {logging_mixin.py:188} INFO - jarinyas
+[2024-11-18T06:18:41.945+0000] {logging_mixin.py:188} INFO - jarinyas/test.txt
+[2024-11-18T06:18:41.946+0000] {logging_mixin.py:188} INFO - kingkaea
+[2024-11-18T06:18:41.946+0000] {logging_mixin.py:188} INFO - kingkaea/test.txt
+[2024-11-18T06:18:41.946+0000] {logging_mixin.py:188} INFO - kittital
+[2024-11-18T06:18:41.946+0000] {logging_mixin.py:188} INFO - kittital/test.txt
+[2024-11-18T06:18:41.946+0000] {logging_mixin.py:188} INFO - kittiyap
+[2024-11-18T06:18:41.946+0000] {logging_mixin.py:188} INFO - kittiyap/test.txt
+[2024-11-18T06:18:41.946+0000] {logging_mixin.py:188} INFO - kraiwitu
+[2024-11-18T06:18:41.946+0000] {logging_mixin.py:188} INFO - kraiwitu/
+[2024-11-18T06:18:41.947+0000] {logging_mixin.py:188} INFO - kraiwitu/test.txt
+[2024-11-18T06:18:41.947+0000] {logging_mixin.py:188} INFO - kridsadp
+[2024-11-18T06:18:41.947+0000] {logging_mixin.py:188} INFO - kridsadp/test.txt
+[2024-11-18T06:18:41.947+0000] {logging_mixin.py:188} INFO - kullayat
+[2024-11-18T06:18:41.947+0000] {logging_mixin.py:188} INFO - kullayat/test.txt
+[2024-11-18T06:18:41.947+0000] {logging_mixin.py:188} INFO - narubeti
+[2024-11-18T06:18:41.947+0000] {logging_mixin.py:188} INFO - narubeti/
+[2024-11-18T06:18:41.948+0000] {logging_mixin.py:188} INFO - narubeti/test.txt
+[2024-11-18T06:18:41.948+0000] {logging_mixin.py:188} INFO - noppawop
+[2024-11-18T06:18:41.948+0000] {logging_mixin.py:188} INFO - noppawop/test.txt
+[2024-11-18T06:18:41.948+0000] {logging_mixin.py:188} INFO - pacharmo
+[2024-11-18T06:18:41.948+0000] {logging_mixin.py:188} INFO - pacharmo/test.txt
+[2024-11-18T06:18:41.948+0000] {logging_mixin.py:188} INFO - pathamal
+[2024-11-18T06:18:41.948+0000] {logging_mixin.py:188} INFO - pathamal/test.txt
+[2024-11-18T06:18:41.948+0000] {logging_mixin.py:188} INFO - peerapsr
+[2024-11-18T06:18:41.949+0000] {logging_mixin.py:188} INFO - peerapsr/
+[2024-11-18T06:18:41.949+0000] {logging_mixin.py:188} INFO - peerapsr/test.txt
+[2024-11-18T06:18:41.949+0000] {logging_mixin.py:188} INFO - peerapsr/test_local.txt
+[2024-11-18T06:18:41.949+0000] {logging_mixin.py:188} INFO - phawatmk
+[2024-11-18T06:18:41.949+0000] {logging_mixin.py:188} INFO - phawatmk/test.txt
+[2024-11-18T06:18:41.949+0000] {logging_mixin.py:188} INFO - pp_trining/
+[2024-11-18T06:18:41.949+0000] {logging_mixin.py:188} INFO - praserth
+[2024-11-18T06:18:41.950+0000] {logging_mixin.py:188} INFO - praserth/test.txt
+[2024-11-18T06:18:41.950+0000] {logging_mixin.py:188} INFO - ratthaslip/
+[2024-11-18T06:18:41.950+0000] {logging_mixin.py:188} INFO - ratthaslip/test_local.txt
+[2024-11-18T06:18:41.950+0000] {logging_mixin.py:188} INFO - santipac
+[2024-11-18T06:18:41.950+0000] {logging_mixin.py:188} INFO - santipac/
+[2024-11-18T06:18:41.950+0000] {logging_mixin.py:188} INFO - santipac/test.txt
+[2024-11-18T06:18:41.950+0000] {logging_mixin.py:188} INFO - sarinthp
+[2024-11-18T06:18:41.950+0000] {logging_mixin.py:188} INFO - sarinthp/test.txt
+[2024-11-18T06:18:41.951+0000] {logging_mixin.py:188} INFO - sirapata
+[2024-11-18T06:18:41.951+0000] {logging_mixin.py:188} INFO - sirapata/
+[2024-11-18T06:18:41.951+0000] {logging_mixin.py:188} INFO - sirapata/test.txt
+[2024-11-18T06:18:41.951+0000] {logging_mixin.py:188} INFO - sirapata/test_local.txt
+[2024-11-18T06:18:41.951+0000] {logging_mixin.py:188} INFO - sukittaf
+[2024-11-18T06:18:41.951+0000] {logging_mixin.py:188} INFO - sukittaf/
+[2024-11-18T06:18:41.951+0000] {logging_mixin.py:188} INFO - sukittaf/test.txt
+[2024-11-18T06:18:41.951+0000] {logging_mixin.py:188} INFO - sukjaivi
+[2024-11-18T06:18:41.952+0000] {logging_mixin.py:188} INFO - sukjaivi/
+[2024-11-18T06:18:41.952+0000] {logging_mixin.py:188} INFO - sukjaivi/test.txt
+[2024-11-18T06:18:41.952+0000] {logging_mixin.py:188} INFO - suppakos
+[2024-11-18T06:18:41.952+0000] {logging_mixin.py:188} INFO - suppakos/test.txt
+[2024-11-18T06:18:41.952+0000] {logging_mixin.py:188} INFO - thanphis
+[2024-11-18T06:18:41.952+0000] {logging_mixin.py:188} INFO - thanphis/test.txt
+[2024-11-18T06:18:41.952+0000] {logging_mixin.py:188} INFO - thitimak
+[2024-11-18T06:18:41.952+0000] {logging_mixin.py:188} INFO - thitimak/test.txt
+[2024-11-18T06:18:41.953+0000] {logging_mixin.py:188} INFO - thiwapoa
+[2024-11-18T06:18:41.953+0000] {logging_mixin.py:188} INFO - thiwapoa/test.txt
+[2024-11-18T06:18:41.953+0000] {logging_mixin.py:188} INFO - worawite
+[2024-11-18T06:18:41.953+0000] {logging_mixin.py:188} INFO - worawite/
+[2024-11-18T06:18:41.953+0000] {logging_mixin.py:188} INFO - worawite/test.txt
+[2024-11-18T06:18:41.953+0000] {logging_mixin.py:188} INFO - worrawuj
+[2024-11-18T06:18:41.953+0000] {logging_mixin.py:188} INFO - worrawuj/test.txt
+[2024-11-18T06:18:41.953+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-11-18T06:18:41.964+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=azure_blob_ingestion_with_upload, task_id=list_blobs, execution_date=20241118T061840, start_date=20241118T061841, end_date=20241118T061841
+[2024-11-18T06:18:41.991+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-11-18T06:18:42.008+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,17 @@
+[2024-11-18T04:11:44.777+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: umbrella.clean_forecast_data scheduled__2024-11-17T00:00:00+00:00 [queued]>
+[2024-11-18T04:11:44.785+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: umbrella.clean_forecast_data scheduled__2024-11-17T00:00:00+00:00 [queued]>
+[2024-11-18T04:11:44.785+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-11-18T04:11:44.797+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): clean_forecast_data> on 2024-11-17 00:00:00+00:00
+[2024-11-18T04:11:44.802+0000] {standard_task_runner.py:60} INFO - Started process 12010 to run task
+[2024-11-18T04:11:44.806+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'umbrella', 'clean_forecast_data', 'scheduled__2024-11-17T00:00:00+00:00', '--job-id', '3558', '--raw', '--subdir', 'DAGS_FOLDER/umbrella.py', '--cfg-path', '/tmp/tmpk2an8d_1']
+[2024-11-18T04:11:44.807+0000] {standard_task_runner.py:88} INFO - Job 3558: Subtask clean_forecast_data
+[2024-11-18T04:11:44.858+0000] {task_command.py:423} INFO - Running <TaskInstance: umbrella.clean_forecast_data scheduled__2024-11-17T00:00:00+00:00 [running]> on host 3c704ad499e6
+[2024-11-18T04:11:44.928+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@***.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='umbrella' AIRFLOW_CTX_TASK_ID='clean_forecast_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-17T00:00:00+00:00'
+[2024-11-18T04:11:44.930+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-11-18T04:11:44.930+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "clean_forecast_data"']
+[2024-11-18T04:11:44.940+0000] {subprocess.py:86} INFO - Output:
+[2024-11-18T04:11:44.943+0000] {subprocess.py:93} INFO - clean_forecast_data
+[2024-11-18T04:11:44.943+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-11-18T04:11:44.970+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=umbrella, task_id=clean_forecast_data, execution_date=20241117T000000, start_date=20241118T041144, end_date=20241118T041144
+[2024-11-18T04:11:45.018+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-11-18T04:11:45.041+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

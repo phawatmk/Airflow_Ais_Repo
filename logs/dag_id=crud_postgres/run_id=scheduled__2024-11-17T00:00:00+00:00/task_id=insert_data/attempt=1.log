@@ -1,0 +1,45 @@
+[2024-11-18T06:48:08.625+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crud_postgres.insert_data scheduled__2024-11-17T00:00:00+00:00 [queued]>
+[2024-11-18T06:48:08.632+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crud_postgres.insert_data scheduled__2024-11-17T00:00:00+00:00 [queued]>
+[2024-11-18T06:48:08.633+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-11-18T06:48:08.644+0000] {taskinstance.py:2217} INFO - Executing <Task(PostgresOperator): insert_data> on 2024-11-17 00:00:00+00:00
+[2024-11-18T06:48:08.649+0000] {standard_task_runner.py:60} INFO - Started process 14576 to run task
+[2024-11-18T06:48:08.654+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'crud_postgres', 'insert_data', 'scheduled__2024-11-17T00:00:00+00:00', '--job-id', '3676', '--raw', '--subdir', 'DAGS_FOLDER/CRUD_Postgres.py', '--cfg-path', '/tmp/tmp21g3g4nt']
+[2024-11-18T06:48:08.655+0000] {standard_task_runner.py:88} INFO - Job 3676: Subtask insert_data
+[2024-11-18T06:48:08.705+0000] {task_command.py:423} INFO - Running <TaskInstance: crud_postgres.insert_data scheduled__2024-11-17T00:00:00+00:00 [running]> on host 3c704ad499e6
+[2024-11-18T06:48:08.777+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crud_postgres' AIRFLOW_CTX_TASK_ID='insert_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-17T00:00:00+00:00'
+[2024-11-18T06:48:08.778+0000] {sql.py:276} INFO - Executing: 
+        INSERT INTO phawatmk.weekly_covid19_reports (
+            year, weeknum, new_case, total_case, new_case_excludeabroad, 
+            total_case_excludeabroad, new_recovered, total_recovered, 
+            new_death, total_death, case_foreign, case_prison, 
+            case_walkin, case_new_prev, case_new_diff, death_new_prev, 
+            death_new_diff, update_date
+        ) VALUES (
+            2024, 44, 569, 41711, 569, 41711, 
+            0, 0, 0, 214, 0, 0, 569, 0, 569, 0, 0, NOW()
+        );
+        
+[2024-11-18T06:48:08.786+0000] {base.py:83} INFO - Using connection ID 'azure_postgres_conn' for task execution.
+[2024-11-18T06:48:08.795+0000] {base.py:83} INFO - Using connection ID 'azure_postgres_conn' for task execution.
+[2024-11-18T06:48:08.832+0000] {sql.py:457} INFO - Running statement: 
+        INSERT INTO phawatmk.weekly_covid19_reports (
+            year, weeknum, new_case, total_case, new_case_excludeabroad, 
+            total_case_excludeabroad, new_recovered, total_recovered, 
+            new_death, total_death, case_foreign, case_prison, 
+            case_walkin, case_new_prev, case_new_diff, death_new_prev, 
+            death_new_diff, update_date
+        ) VALUES (
+            2024, 44, 569, 41711, 569, 41711, 
+            0, 0, 0, 214, 0, 0, 569, 0, 569, 0, 0, NOW()
+        );
+        , parameters: None
+[2024-11-18T06:48:08.836+0000] {sql.py:466} INFO - Rows affected: 1
+[2024-11-18T06:48:08.837+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/common/sql/hooks/sql.py:407: AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+  result = self._make_common_data_structure(handler(cur))
+
+[2024-11-18T06:48:08.849+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=crud_postgres, task_id=insert_data, execution_date=20241117T000000, start_date=20241118T064808, end_date=20241118T064808
+[2024-11-18T06:48:08.905+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-11-18T06:48:08.916+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+  result = cls.__new__(cls)
+
+[2024-11-18T06:48:08.927+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
